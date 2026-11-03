@@ -17,14 +17,16 @@ pipeline {
         stage('Build') {
             steps {
                 echo '=== BUILD : Construction du projet ==='
-                sh 'test -f Jenkins jenkins.html'
-                sh 'test -f Jenkins jenkins.css'
+
+                sh 'test -f jenkins.html'
+                sh 'test -f jenkins.css'
             }
         }
 
         stage('Test') {
             steps {
                 echo '=== TEST : Verification du projet ==='
+
                 sh 'grep-q "<html" Jenkins.html'
                 sh 'grep-q "<h1>" Jenkins.html'
             }
