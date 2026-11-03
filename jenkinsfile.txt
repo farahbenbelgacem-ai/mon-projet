@@ -25,8 +25,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo '=== TEST : Verification du projet ==='
-               sh 'grep-q "<html" Jenkins.html'
-               sh 'grep-q "<h1>" Jenkins.html'
+                sh 'grep-q "<html" Jenkins.html'
+                sh 'grep-q "<h1>" Jenkins.html'
             }
         }
 
