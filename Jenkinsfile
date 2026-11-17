@@ -9,6 +9,7 @@ pipeline {
     environment {
         IMAGE = 'farah1181/monapp'
         TAG = "build-${env.BUILD_NUMBER}"
+        PATH+DOCKER = 'C:\\Users\\asus\\AppData\\Local\\Programs\\DockerDesktop\\resources\\bin'
     }
 
     stages {
